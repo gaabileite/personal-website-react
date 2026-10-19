@@ -26,6 +26,7 @@ export const translations = {
     technologies: { title: 'Technologies' },
     about: {
       title: 'About Me',
+      photoAlt: 'Portrait of Gabriela Leite',
       highlight:
         'I like turning real-world problems into interfaces and systems that work well for people.',
       intro:
@@ -111,6 +112,7 @@ export const translations = {
     technologies: { title: 'Tecnologias' },
     about: {
       title: 'Sobre mim',
+      photoAlt: 'Retrato de Gabriela Leite',
       highlight:
         'Gosto de transformar problemas reais em interfaces e sistemas que funcionem bem para as pessoas.',
       intro:

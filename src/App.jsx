@@ -5,6 +5,7 @@ import Section from './components/Section.jsx'
 import Teclado from './components/Teclado.jsx'
 import Contato from './components/Contato.jsx'
 import Footer from './components/Footer.jsx'
+import foto from './assets/gabriela.jpg'
 import { projects } from './data/projects.js'
 import { useLanguage } from './i18n/LanguageContext.jsx'
 
@@ -65,6 +66,7 @@ export default function App() {
 
         <Section id="about" titulo={t.about.title}>
           <div className="sobre-grade">
+            <img className="foto" src={foto} alt={t.about.photoAlt} width="602" height="782" />
             <div className="sobre-texto">
               <p className="sobre-destaque">{t.about.highlight}</p>
               <p>{t.about.intro}</p>
@@ -74,14 +76,14 @@ export default function App() {
               </ul>
               <p>{t.about.languages}</p>
             </div>
-            <div className="numeros">
-              {t.about.stats.map((n) => (
-                <div key={n.label} className="numero">
-                  <strong>{n.key === 'projects' ? projects.length : n.value}</strong>
-                  <span>{n.label}</span>
-                </div>
-              ))}
-            </div>
+          </div>
+          <div className="numeros">
+            {t.about.stats.map((n) => (
+              <div key={n.label} className="numero">
+                <strong>{n.key === 'projects' ? projects.length : n.value}</strong>
+                <span>{n.label}</span>
+              </div>
+            ))}
           </div>
         </Section>
 

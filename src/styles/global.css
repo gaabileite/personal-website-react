@@ -93,6 +93,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .intro.saindo { transform: translateY(-100%); }
 .idioma-intro { top: 1.5rem; right: 1.5rem; }
 .intro-conteudo > * { animation: subir 1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.intro-conteudo > .intro-nome { animation: none; }
 .intro-conteudo > :nth-child(2) { animation-delay: 0.35s; }
 .intro-conteudo > :nth-child(3) { animation-delay: 0.5s; }
 .intro-nome { display: flex; flex-direction: column; align-items: center; font-family: 'Yellowtail', cursive; font-weight: 400; font-size: clamp(4.5rem, 15vw, 9.5rem); line-height: 0.95; color: #4a4a4a; }
@@ -104,6 +105,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero { min-height: 100svh; display: flex; align-items: center; position: relative; padding: var(--header-h) 0 5rem; }
 .hero-grade { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 2rem; }
 .hero-texto > * { animation: subir 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.hero-texto > .hero-nome { animation: none; }
 .hero-texto > :nth-child(2) { animation-delay: 0.1s; }
 .hero-texto > :nth-child(3) { animation-delay: 0.2s; }
 .hero-texto > :nth-child(4) { animation-delay: 0.3s; }
@@ -160,15 +162,16 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .tech img { filter: grayscale(1) brightness(0.28); }
 
 /* Sobre */
-.sobre-grade { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: start; }
+.sobre-grade { display: grid; grid-template-columns: 1fr 1.6fr; gap: 4rem; align-items: center; }
+.foto { width: 100%; height: auto; max-width: 24rem; border-radius: var(--radius); filter: grayscale(1); box-shadow: 0 24px 50px -28px rgba(0, 0, 0, 0.5); }
 .sobre-texto > * + * { margin-top: 1.4rem; }
 .sobre-destaque { font-size: 1.5rem; line-height: 1.6; color: var(--fg-bold); }
 .lista-seta { display: grid; gap: 0.25rem; }
 .lista-seta li { position: relative; padding-left: 1.4rem; }
 .lista-seta li::before { content: '▹'; position: absolute; left: 0; color: var(--fg-bold); }
 
-.numeros { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-.numero { background: var(--bg-alt); border-radius: var(--radius); aspect-ratio: 1 / 1.1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem; transition: transform 0.25s, box-shadow 0.25s; }
+.numeros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; }
+.numero { background: var(--bg-alt); border-radius: var(--radius); aspect-ratio: 1 / 0.8; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem; transition: transform 0.25s, box-shadow 0.25s; }
 .numero:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.35); }
 .numero strong { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.8rem, 4vw, 2.75rem); color: var(--fg-bold); line-height: 1.1; }
 .numero span { font-size: 1.05rem; margin-top: 0.4rem; }
@@ -222,7 +225,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 900px) {
   .hero-grade { grid-template-columns: 1fr; }
   .teclado { min-height: 15rem; transform: scale(0.75); }
-  .sobre-grade { grid-template-columns: 1fr; gap: 3rem; }
+  .sobre-grade { grid-template-columns: 1fr; gap: 2.5rem; }
+  .foto { margin-inline: auto; }
+  .numeros { grid-template-columns: 1fr 1fr; margin-top: 2.5rem; }
   .footer-inner { grid-template-columns: 1fr; text-align: center; }
   .topo { justify-self: center; }
 }
