@@ -93,7 +93,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .intro.saindo { transform: translateY(-100%); }
 .idioma-intro { top: 1.5rem; right: 1.5rem; }
 .intro-conteudo > * { animation: subir 1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-.intro-conteudo > .intro-nome { animation: none; }
 .intro-conteudo > :nth-child(2) { animation-delay: 0.35s; }
 .intro-conteudo > :nth-child(3) { animation-delay: 0.5s; }
 .intro-nome { display: flex; flex-direction: column; align-items: center; font-family: 'Yellowtail', cursive; font-weight: 400; font-size: clamp(4.5rem, 15vw, 9.5rem); line-height: 0.95; color: #4a4a4a; }
@@ -105,7 +104,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero { min-height: 100svh; display: flex; align-items: center; position: relative; padding: var(--header-h) 0 5rem; }
 .hero-grade { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 2rem; }
 .hero-texto > * { animation: subir 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
-.hero-texto > .hero-nome { animation: none; }
 .hero-texto > :nth-child(2) { animation-delay: 0.1s; }
 .hero-texto > :nth-child(3) { animation-delay: 0.2s; }
 .hero-texto > :nth-child(4) { animation-delay: 0.3s; }
