@@ -1,6 +1,6 @@
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 
-const EMAIL = 'glal2@cin.ufpe.br'
+const EMAIL = 'gandradelima10@gmail.com'
 
 export const redes = [
   {
