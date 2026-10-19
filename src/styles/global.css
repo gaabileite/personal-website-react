@@ -128,8 +128,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @keyframes quicar { 50% { transform: translateY(6px); } }
 
 /* Teclas GABI (imagens estáticas) */
-.teclado { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; max-width: 24rem; margin-inline: auto; }
-.tecla { width: 100%; height: auto; display: block; filter: drop-shadow(0 14px 14px rgba(0, 0, 0, 0.18)); }
+.teclado { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.6rem; width: 100%; max-width: 32rem; margin-inline: auto; align-items: end; }
+.tecla { width: 100%; height: auto; display: block; filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.18)); }
 
 /* --- Seções --- */
 .secao { padding: 6.5rem 0; }
@@ -209,7 +209,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* --- Responsivo --- */
 @media (max-width: 900px) {
   .hero-grade { grid-template-columns: 1fr; }
-  .teclado { max-width: 18rem; }
+  .teclado { max-width: 22rem; gap: 0.4rem; }
   .sobre-grade { grid-template-columns: 1fr; gap: 2.5rem; }
   .foto { margin-inline: auto; }
   .numeros { grid-template-columns: 1fr 1fr; margin-top: 2.5rem; }
