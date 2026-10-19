@@ -129,7 +129,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Teclas GABI (imagens estáticas) */
 .teclado { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.6rem; width: 100%; max-width: 32rem; margin-inline: auto; align-items: end; }
-.tecla { width: 100%; height: auto; display: block; filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.18)); }
+.tecla { width: 100%; height: auto; display: block; cursor: pointer; filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.18)); transition: transform 0.12s ease-out, filter 0.12s ease-out; }
+/* Tecla "pressionada": afunda um pouco e a sombra encurta. */
+.tecla:hover, .tecla:active { transform: translateY(8px) scale(0.97); filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25)); }
 
 /* --- Seções --- */
 .secao { padding: 6.5rem 0; }
