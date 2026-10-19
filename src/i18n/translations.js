@@ -8,6 +8,7 @@ export const translations = {
       about: 'About',
       technologies: 'Technologies',
       experience: 'Experience',
+      projects: 'Projects',
       contact: 'Contact',
     },
     intro: { role: 'Information Systems Student', button: 'Enter' },
@@ -63,6 +64,12 @@ export const translations = {
         },
       ],
     },
+    projects: {
+      title: 'Projects',
+      empty: 'New projects are coming soon.',
+      repo: 'Repository',
+      demo: 'Live demo',
+    },
     contact: {
       title: "Let's Connect",
       subtitle: 'Have a project in mind or want to collaborate? Get in touch!',
@@ -85,6 +92,7 @@ export const translations = {
       about: 'Sobre',
       technologies: 'Tecnologias',
       experience: 'Experiência',
+      projects: 'Projetos',
       contact: 'Contato',
     },
     intro: { role: 'Estudante de Sistemas de Informação', button: 'Entrar' },
@@ -139,6 +147,12 @@ export const translations = {
           tags: ['Python', 'C++', 'React'],
         },
       ],
+    },
+    projects: {
+      title: 'Projetos',
+      empty: 'Novos projetos em breve.',
+      repo: 'Repositório',
+      demo: 'Demonstração',
     },
     contact: {
       title: 'Vamos conversar',

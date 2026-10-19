@@ -5,6 +5,7 @@ import Section from './components/Section.jsx'
 import Teclado from './components/Teclado.jsx'
 import Contato from './components/Contato.jsx'
 import Footer from './components/Footer.jsx'
+import { projects } from './data/projects.js'
 import { useLanguage } from './i18n/LanguageContext.jsx'
 
 // Ícones do devicon (CDN); o filtro em CSS deixa todos monocromáticos.
@@ -22,7 +23,7 @@ const tecnologias = [
 ]
 
 export default function App() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   // Quem chega por um link com âncora (ex.: /#contact) pula a abertura.
   const [intro, setIntro] = useState(!window.location.hash)
 
@@ -101,7 +102,29 @@ export default function App() {
           </ol>
         </Section>
 
-        <Section id="contact" titulo={t.contact.title} centro>
+        <Section id="projects" titulo={t.projects.title}>
+          {projects.length === 0 ? (
+            <p className="vazio">{t.projects.empty}</p>
+          ) : (
+            <div className="projetos-grade">
+              {projects.map((p) => (
+                <article key={p.title.en} className="cartao projeto">
+                  <h3>{p.title[lang]}</h3>
+                  <p>{p.description[lang]}</p>
+                  <ul className="pilulas">
+                    {p.tags.map((tag) => <li key={tag}>{tag}</li>)}
+                  </ul>
+                  <div className="projeto-links">
+                    {p.repo && <a href={p.repo} target="_blank" rel="noreferrer">{t.projects.repo} ↗</a>}
+                    {p.demo && <a href={p.demo} target="_blank" rel="noreferrer">{t.projects.demo} ↗</a>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          )}
+        </Section>
+
+        <Section id="contact" titulo={t.contact.title} alt centro>
           <p className="contato-sub">{t.contact.subtitle}</p>
           <Contato />
         </Section>
