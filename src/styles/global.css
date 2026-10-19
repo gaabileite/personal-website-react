@@ -158,7 +158,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .lista-seta li::before { content: '▹'; position: absolute; left: 0; color: var(--fg-bold); }
 
 .numeros { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 4rem; }
-.numero { background: var(--bg-alt); border-radius: var(--radius); aspect-ratio: 1 / 0.8; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem; transition: transform 0.25s, box-shadow 0.25s; }
+.numero { background: #fff; border-radius: var(--radius); aspect-ratio: 1 / 0.8; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 1rem; transition: transform 0.25s, box-shadow 0.25s; }
 .numero:hover { transform: translateY(-4px); box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.35); }
 .numero strong { font-family: var(--font-display); font-weight: 600; font-size: clamp(1.8rem, 4vw, 2.75rem); color: var(--fg-bold); line-height: 1.1; }
 .numero span { font-size: 1.05rem; margin-top: 0.4rem; }

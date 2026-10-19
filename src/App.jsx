@@ -47,24 +47,13 @@ export default function App() {
             </div>
             <Teclado letras="GABI" />
           </div>
-          <a className="rolar" href="#technologies">
+          <a className="rolar" href="#about">
             {t.hero.scroll}
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><path d="m5 9 7 7 7-7" /></svg>
           </a>
         </section>
 
-        <Section id="technologies" titulo={t.technologies.title} alt>
-          <ul className="tech-grade">
-            {tecnologias.map((tec) => (
-              <li key={tec.nome} className="tech">
-                <img src={tec.img} alt="" width="72" height="72" loading="lazy" />
-                <span>{tec.nome}</span>
-              </li>
-            ))}
-          </ul>
-        </Section>
-
-        <Section id="about" titulo={t.about.title}>
+        <Section id="about" titulo={t.about.title} alt>
           <div className="sobre-grade">
             <img className="foto" src={foto} alt={t.about.photoAlt} width="602" height="782" />
             <div className="sobre-texto">
@@ -85,6 +74,17 @@ export default function App() {
               </div>
             ))}
           </div>
+        </Section>
+
+        <Section id="technologies" titulo={t.technologies.title}>
+          <ul className="tech-grade">
+            {tecnologias.map((tec) => (
+              <li key={tec.nome} className="tech">
+                <img src={tec.img} alt="" width="72" height="72" loading="lazy" />
+                <span>{tec.nome}</span>
+              </li>
+            ))}
+          </ul>
         </Section>
 
         <Section id="experience" titulo={t.experience.title} alt>
