@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
+import LanguageToggle from './LanguageToggle.jsx'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 export const secoes = ['home', 'about', 'technologies', 'experience', 'contact']
 
 export default function Navbar() {
-  const { lang, setLang, t } = useLanguage()
+  const { t } = useLanguage()
   const [ativa, setAtiva] = useState('home')
   const [aberto, setAberto] = useState(false)
   const [rolou, setRolou] = useState(false)
@@ -32,18 +33,7 @@ export default function Navbar() {
   return (
     <header className={rolou ? 'site-header rolou' : 'site-header'}>
       <div className="container header-inner">
-        <div className="idioma" role="group" aria-label={t.langLabel}>
-          {['en', 'pt'].map((l) => (
-            <button
-              key={l}
-              className={lang === l ? 'idioma-op ativo' : 'idioma-op'}
-              aria-pressed={lang === l}
-              onClick={() => setLang(l)}
-            >
-              {l.toUpperCase()}
-            </button>
-          ))}
-        </div>
+        <LanguageToggle />
 
         <button
           className="menu-botao"

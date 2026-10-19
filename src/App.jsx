@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import Intro from './components/Intro.jsx'
 import Navbar from './components/Navbar.jsx'
 import Section from './components/Section.jsx'
 import Teclado from './components/Teclado.jsx'
@@ -22,9 +24,12 @@ const tecnologias = [
 
 export default function App() {
   const { t } = useLanguage()
+  // Quem chega por um link com âncora (ex.: /#contact) pula a abertura.
+  const [intro, setIntro] = useState(!window.location.hash)
 
   return (
     <>
+      {intro && <Intro onEntrar={() => setIntro(false)} />}
       <Navbar />
 
       <main>
