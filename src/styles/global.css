@@ -130,7 +130,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @keyframes quicar { 50% { transform: translateY(6px); } }
 
 /* Teclado isométrico */
-.teclado { display: grid; place-items: center; min-height: 22rem; animation: subir 1s 0.3s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.teclado { display: grid; place-items: center; min-height: 22rem; }
 .teclado-base {
   --u: 5.5rem;
   position: relative; display: flex; gap: 0.5rem; padding: 0.9rem;
@@ -138,13 +138,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   transform: rotateX(55deg) rotateZ(-38deg); transform-style: preserve-3d;
   box-shadow: 1.4rem 1.4rem 2rem rgba(0, 0, 0, 0.18);
 }
-.tecla { position: relative; width: var(--u); height: var(--u); transform-style: preserve-3d; animation: tecla 4s ease-in-out infinite; animation-delay: calc(var(--i) * 0.25s); }
+.tecla { position: relative; width: var(--u); height: var(--u); transform-style: preserve-3d; }
 .tecla-topo {
   position: absolute; inset: 0; display: grid; place-items: center; transform: translateZ(1.6rem);
   background: #3b3b3b; color: #e8e8e8; font-family: var(--font-display); font-weight: 600; font-size: 2.4rem; border-radius: 0.6rem;
   box-shadow: 0 0 0 0.2rem #2a2a2a, 0.35rem 0.35rem 0 0.1rem #1f1f1f, 0.7rem 0.7rem 0 0.1rem #1f1f1f, 1rem 1rem 0 0.1rem #1f1f1f;
 }
-@keyframes tecla { 0%, 70%, 100% { transform: translateZ(0); } 80% { transform: translateZ(-0.7rem); } }
 
 /* --- Seções --- */
 .secao { padding: 6.5rem 0; }
