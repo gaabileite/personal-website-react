@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 const EMAIL = 'glal2@cin.ufpe.br'
 
@@ -14,20 +15,22 @@ export const redes = [
     icone: 'M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z',
   },
   {
-    nome: 'E-mail',
+    nome: 'Email',
     href: `mailto:${EMAIL}`,
     icone: 'M1.5 4.5h3.2L12 10.4l7.3-5.9h3.2v15h-3.4V9.4L12 15.3 4.9 9.4v10.1H1.5v-15Z',
   },
 ]
 
 export default function Contato() {
+  const { t } = useLanguage()
+  const c = t.contact
   const [form, setForm] = useState({ nome: '', email: '', mensagem: '' })
   const mudar = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
   // Site estático: o envio abre o cliente de e-mail com a mensagem preenchida.
   const enviar = (e) => {
     e.preventDefault()
-    const assunto = encodeURIComponent(`Contato pelo site — ${form.nome}`)
+    const assunto = encodeURIComponent(`${c.emailSubject} ${form.nome}`)
     const corpo = encodeURIComponent(`${form.mensagem}\n\n${form.nome} <${form.email}>`)
     window.location.href = `mailto:${EMAIL}?subject=${assunto}&body=${corpo}`
   }
@@ -35,14 +38,14 @@ export default function Contato() {
   return (
     <div className="contato-grade">
       <form className="form" onSubmit={enviar}>
-        <input name="nome" placeholder="Nome" aria-label="Nome" required value={form.nome} onChange={mudar} />
-        <input name="email" type="email" placeholder="E-mail" aria-label="E-mail" required value={form.email} onChange={mudar} />
-        <textarea name="mensagem" placeholder="Mensagem" aria-label="Mensagem" rows="6" required value={form.mensagem} onChange={mudar} />
-        <button className="botao botao-cheio" type="submit">Enviar mensagem</button>
+        <input name="nome" placeholder={c.name} aria-label={c.name} required value={form.nome} onChange={mudar} />
+        <input name="email" type="email" placeholder={c.email} aria-label={c.email} required value={form.email} onChange={mudar} />
+        <textarea name="mensagem" placeholder={c.message} aria-label={c.message} rows="6" required value={form.mensagem} onChange={mudar} />
+        <button className="botao botao-cheio" type="submit">{c.send}</button>
       </form>
 
       <div className="redes">
-        <h3>Conecte-se comigo</h3>
+        <h3>{c.connect}</h3>
         <ul className="redes-icones">
           {redes.map((r) => (
             <li key={r.nome}>
@@ -53,8 +56,8 @@ export default function Contato() {
           ))}
         </ul>
         <hr />
-        <p><span className="dim-forte">Local:</span> Recife, Pernambuco</p>
-        <p><span className="dim-forte">Status:</span> Estudante de Sistemas de Informação · CIn/UFPE</p>
+        <p><span className="dim-forte">{c.location}</span> {c.locationValue}</p>
+        <p><span className="dim-forte">{c.status}</span> {c.statusValue}</p>
       </div>
     </div>
   )

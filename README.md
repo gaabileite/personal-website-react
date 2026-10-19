@@ -4,8 +4,8 @@ Site pessoal e portfólio acadêmico desenvolvido em React + Vite, publicado
 como site estático na pasta virtual do CIn/UFPE.
 
 Arquitetura **SPA** (Single-Page Application): um único `index.html` e uma
-única aplicação React, com seções navegáveis por âncoras (`#sobre`,
-`#tecnologias`, `#experiencia`, `#contato`) e rolagem suave.
+única aplicação React, com seções navegáveis por âncoras (`#about`,
+`#technologies`, `#experience`, `#contact`) e rolagem suave.
 
 ## Como rodar
 
@@ -21,8 +21,9 @@ npm run preview   # serve o build localmente (teste antes de publicar)
 ```
 index.html                → único HTML
 src/main.jsx              → ponto de entrada React
-src/App.jsx               → seções da página (Início, Tecnologias, Sobre, Experiência, Contato)
+src/App.jsx               → seções da página (Home, Technologies, About, Experience, Contact)
 src/components/           → Navbar, Section, Teclado, Contato, Footer
+src/i18n/                 → traduções (EN padrão, PT opcional) e seletor de idioma
 src/hooks/useReveal.js    → animação de entrada ao rolar
 src/styles/global.css     → estilos (tema claro)
 ```
