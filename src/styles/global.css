@@ -127,21 +127,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .rolar svg { animation: quicar 1.6s ease-in-out infinite; }
 @keyframes quicar { 50% { transform: translateY(6px); } }
 
-/* Teclado isométrico */
-.teclado { display: grid; place-items: center; min-height: 22rem; }
-.teclado-base {
-  --u: 5.5rem;
-  position: relative; display: flex; gap: 0.5rem; padding: 0.9rem;
-  background: #d2d2d2; border-radius: 6px;
-  transform: rotateX(55deg) rotateZ(-38deg); transform-style: preserve-3d;
-  box-shadow: 1.4rem 1.4rem 2rem rgba(0, 0, 0, 0.18);
-}
-.tecla { position: relative; width: var(--u); height: var(--u); transform-style: preserve-3d; }
-.tecla-topo {
-  position: absolute; inset: 0; display: grid; place-items: center; transform: translateZ(1.6rem);
-  background: #3b3b3b; color: #e8e8e8; font-family: var(--font-display); font-weight: 600; font-size: 2.4rem; border-radius: 0.6rem;
-  box-shadow: 0 0 0 0.2rem #2a2a2a, 0.35rem 0.35rem 0 0.1rem #1f1f1f, 0.7rem 0.7rem 0 0.1rem #1f1f1f, 1rem 1rem 0 0.1rem #1f1f1f;
-}
+/* Teclas GABI (imagens estáticas) */
+.teclado { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; max-width: 24rem; margin-inline: auto; }
+.tecla { width: 100%; height: auto; display: block; filter: drop-shadow(0 14px 14px rgba(0, 0, 0, 0.18)); }
 
 /* --- Seções --- */
 .secao { padding: 6.5rem 0; }
@@ -221,7 +209,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* --- Responsivo --- */
 @media (max-width: 900px) {
   .hero-grade { grid-template-columns: 1fr; }
-  .teclado { min-height: 15rem; transform: scale(0.75); }
+  .teclado { max-width: 18rem; }
   .sobre-grade { grid-template-columns: 1fr; gap: 2.5rem; }
   .foto { margin-inline: auto; }
   .numeros { grid-template-columns: 1fr 1fr; margin-top: 2.5rem; }
