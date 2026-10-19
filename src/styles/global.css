@@ -158,7 +158,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .tech { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; font-size: 1.3rem; width: 8.5rem; transition: transform 0.25s; }
 .tech:hover { transform: translateY(-6px); }
 .tech img { filter: grayscale(1) brightness(0.28); }
-.tech-sigla { width: 72px; height: 72px; display: grid; place-items: center; border: 4px solid #4a4a4a; border-radius: 12px; font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; color: #4a4a4a; }
 
 /* Sobre */
 .sobre-grade { display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: start; }

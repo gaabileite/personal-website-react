@@ -19,7 +19,6 @@ const tecnologias = [
   { nome: 'HTML', img: icone('html5') },
   { nome: 'CSS', img: icone('css3') },
   { nome: 'Git', img: icone('git') },
-  { nome: 'SystemVerilog', img: null },
 ]
 
 export default function App() {
@@ -56,11 +55,7 @@ export default function App() {
           <ul className="tech-grade">
             {tecnologias.map((tec) => (
               <li key={tec.nome} className="tech">
-                {tec.img ? (
-                  <img src={tec.img} alt="" width="72" height="72" loading="lazy" />
-                ) : (
-                  <span className="tech-sigla" aria-hidden="true">SV</span>
-                )}
+                <img src={tec.img} alt="" width="72" height="72" loading="lazy" />
                 <span>{tec.nome}</span>
               </li>
             ))}
