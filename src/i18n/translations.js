@@ -66,11 +66,6 @@ export const translations = {
     contact: {
       title: "Let's Connect",
       subtitle: 'Have a project in mind or want to collaborate? Get in touch!',
-      name: 'Name',
-      email: 'Email',
-      message: 'Message',
-      send: 'Send Message',
-      emailSubject: 'Website contact —',
       connect: 'Connect With Me',
       location: 'Location:',
       locationValue: 'Recife, Pernambuco, Brazil',
@@ -148,11 +143,6 @@ export const translations = {
     contact: {
       title: 'Vamos conversar',
       subtitle: 'Tem um projeto em mente ou quer colaborar? Fale comigo!',
-      name: 'Nome',
-      email: 'E-mail',
-      message: 'Mensagem',
-      send: 'Enviar mensagem',
-      emailSubject: 'Contato pelo site —',
       connect: 'Conecte-se comigo',
       location: 'Local:',
       locationValue: 'Recife, Pernambuco, Brasil',

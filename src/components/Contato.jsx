@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useLanguage } from '../i18n/LanguageContext.jsx'
 
 const EMAIL = 'glal2@cin.ufpe.br'
@@ -24,41 +23,22 @@ export const redes = [
 export default function Contato() {
   const { t } = useLanguage()
   const c = t.contact
-  const [form, setForm] = useState({ nome: '', email: '', mensagem: '' })
-  const mudar = (e) => setForm({ ...form, [e.target.name]: e.target.value })
-
-  // Site estático: o envio abre o cliente de e-mail com a mensagem preenchida.
-  const enviar = (e) => {
-    e.preventDefault()
-    const assunto = encodeURIComponent(`${c.emailSubject} ${form.nome}`)
-    const corpo = encodeURIComponent(`${form.mensagem}\n\n${form.nome} <${form.email}>`)
-    window.location.href = `mailto:${EMAIL}?subject=${assunto}&body=${corpo}`
-  }
 
   return (
-    <div className="contato-grade">
-      <form className="form" onSubmit={enviar}>
-        <input name="nome" placeholder={c.name} aria-label={c.name} required value={form.nome} onChange={mudar} />
-        <input name="email" type="email" placeholder={c.email} aria-label={c.email} required value={form.email} onChange={mudar} />
-        <textarea name="mensagem" placeholder={c.message} aria-label={c.message} rows="6" required value={form.mensagem} onChange={mudar} />
-        <button className="botao botao-cheio" type="submit">{c.send}</button>
-      </form>
-
-      <div className="redes">
-        <h3>{c.connect}</h3>
-        <ul className="redes-icones">
-          {redes.map((r) => (
-            <li key={r.nome}>
-              <a href={r.href} aria-label={r.nome} target={r.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
-                <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor" aria-hidden="true"><path d={r.icone} /></svg>
-              </a>
-            </li>
-          ))}
-        </ul>
-        <hr />
-        <p><span className="dim-forte">{c.location}</span> {c.locationValue}</p>
-        <p><span className="dim-forte">{c.status}</span> {c.statusValue}</p>
-      </div>
+    <div className="redes">
+      <h3>{c.connect}</h3>
+      <ul className="redes-icones">
+        {redes.map((r) => (
+          <li key={r.nome}>
+            <a href={r.href} aria-label={r.nome} target={r.href.startsWith('http') ? '_blank' : undefined} rel="noreferrer">
+              <svg viewBox="0 0 24 24" width="40" height="40" fill="currentColor" aria-hidden="true"><path d={r.icone} /></svg>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <hr />
+      <p><span className="dim-forte">{c.location}</span> {c.locationValue}</p>
+      <p><span className="dim-forte">{c.status}</span> {c.statusValue}</p>
     </div>
   )
 }
