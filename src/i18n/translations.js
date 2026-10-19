@@ -40,8 +40,9 @@ export const translations = {
         'Requirements engineering',
       ],
       languages: 'Languages: Portuguese (native), English (fluent) and French (intermediate).',
+      // `key: 'projects'` is filled in with the real project count (see App.jsx).
       stats: [
-        { value: '6', label: 'Interests' },
+        { key: 'projects', label: 'Projects' },
         { value: '3', label: 'Languages' },
         { value: '2026', label: 'Journey started' },
         { value: 'Always', label: 'Learning' },
@@ -125,7 +126,7 @@ export const translations = {
       ],
       languages: 'Idiomas: português (nativo), inglês (fluente) e francês (intermediário).',
       stats: [
-        { value: '6', label: 'Interesses' },
+        { key: 'projects', label: 'Projetos' },
         { value: '3', label: 'Idiomas' },
         { value: '2026', label: 'Início da jornada' },
         { value: 'Sempre', label: 'Aprendendo' },

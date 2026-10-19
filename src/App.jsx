@@ -77,7 +77,7 @@ export default function App() {
             <div className="numeros">
               {t.about.stats.map((n) => (
                 <div key={n.label} className="numero">
-                  <strong>{n.value}</strong>
+                  <strong>{n.key === 'projects' ? projects.length : n.value}</strong>
                   <span>{n.label}</span>
                 </div>
               ))}
