@@ -109,7 +109,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .hero-texto > :nth-child(4) { animation-delay: 0.3s; }
 @keyframes subir { from { opacity: 0; transform: translateY(24px); } }
 
-.hero-nome { font-family: var(--font-display); font-weight: 600; font-size: clamp(3.2rem, 9vw, 6.5rem); line-height: 1.02; letter-spacing: -0.03em; color: var(--fg-bold); }
+.hero-nome { font-family: var(--font-display); font-weight: 600; font-size: clamp(2.25rem, 5.6vw, 4.5rem); line-height: 1.1; white-space: nowrap; letter-spacing: -0.03em; color: var(--fg-bold); }
 .hero-sub { font-weight: 300; font-size: clamp(1.15rem, 2.6vw, 2rem); text-wrap: balance; line-height: 1.55; color: #3a3a3a; margin-top: 1.75rem; }
 .hero-desc { margin-top: 1.5rem; font-size: 1.25rem; max-width: 30rem; }
 .hero-acoes { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
@@ -146,7 +146,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .tech-grade { display: flex; flex-wrap: wrap; gap: 3rem 4rem; }
 .tech { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; font-size: 1.3rem; width: 8.5rem; transition: transform 0.25s; }
 .tech:hover { transform: translateY(-6px); }
-.tech img { filter: grayscale(1) brightness(0.28); }
+
 
 /* Sobre */
 .sobre-grade { display: grid; grid-template-columns: 1fr 1.6fr; gap: 4rem; align-items: center; }
@@ -203,7 +203,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .footer-inner { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem; }
 .footer-nome { color: #fff; font-size: 1.2rem; font-weight: 400; }
 .footer-centro { text-align: center; }
-.footer-centro ul { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 0.5rem; }
+.footer-centro ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.5rem; margin-bottom: 0.5rem; }
 .footer-centro a:hover, .topo:hover { color: #fff; }
 .footer-centro p { font-size: 0.8rem; color: #8a8a8a; }
 .topo { justify-self: end; }

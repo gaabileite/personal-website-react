@@ -37,7 +37,7 @@ export default function App() {
         <section id="home" className="hero">
           <div className="container hero-grade">
             <div className="hero-texto">
-              <h1 className="hero-nome">Gabriela<br />Leite</h1>
+              <h1 className="hero-nome">Gabriela Leite</h1>
               <h2 className="hero-sub">{t.hero.subtitle}</h2>
               <p className="hero-desc">{t.hero.description}</p>
               <div className="hero-acoes">
