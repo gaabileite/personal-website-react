@@ -157,7 +157,7 @@ export const translations = {
       empty: 'Novos projetos em breve.',
       role: 'Papel',
       repo: 'Repositório',
-      demo: 'Demonstração',
+      demo: 'Demo',
     },
     contact: {
       title: 'Vamos conversar',
