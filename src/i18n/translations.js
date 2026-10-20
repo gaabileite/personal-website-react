@@ -69,6 +69,7 @@ export const translations = {
     projects: {
       title: 'Projects',
       empty: 'New projects are coming soon.',
+      role: 'Role',
       repo: 'Repository',
       demo: 'Live demo',
     },
@@ -154,6 +155,7 @@ export const translations = {
     projects: {
       title: 'Projetos',
       empty: 'Novos projetos em breve.',
+      role: 'Papel',
       repo: 'Repositório',
       demo: 'Demonstração',
     },

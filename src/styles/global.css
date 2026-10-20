@@ -184,6 +184,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .projeto { background: var(--bg-alt); box-shadow: none; display: flex; flex-direction: column; gap: 0.9rem; }
 .projeto .pilulas { margin-top: 0; }
 .projeto .pilulas li { background: #fff; }
+.projeto-papel { font-size: 0.95rem; }
 .projeto-links { display: flex; gap: 1.5rem; margin-top: auto; }
 .projeto-links a { color: var(--fg-bold); border-bottom: 1px solid transparent; transition: border-color 0.2s; }
 .projeto-links a:hover { border-color: var(--fg-bold); }
