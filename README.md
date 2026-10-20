@@ -19,19 +19,22 @@ npm run preview   # serve o build localmente (teste antes de publicar)
 ## Estrutura
 
 ```
-index.html                → único HTML
-src/main.jsx              → ponto de entrada React
-src/App.jsx               → seções da página (Home, Technologies, About, Experience, Contact)
-src/components/           → Navbar, Section, Teclado, Contato, Footer
-src/data/projects.js       → lista de projetos (vazia = mensagem "em breve")
-src/i18n/                 → traduções (EN padrão, PT opcional) e seletor de idioma
-src/hooks/useReveal.js    → animação de entrada ao rolar
-src/styles/global.css     → estilos (tema claro)
+index.html                       → único HTML
+src/main.jsx                     → ponto de entrada React
+src/App.jsx                      → seções da página (Home, About, Technologies, Experience, Projects, Contact)
+src/components/                  → Intro, Section, Teclado, Contato
+src/components/layout/           → Navbar, Footer, LanguageToggle
+src/data/                        → projetos, tecnologias e redes sociais
+src/i18n/                        → traduções (EN padrão, PT opcional) e seletor de idioma
+src/assets/                      → foto e imagens das teclas
+src/styles/global.css            → estilos (tema claro)
+deploy/                          → Dockerfile, nginx.conf e fly.toml (Fly.io)
 ```
 
-## Publicação
+## Publicação (Fly.io)
 
 ```bash
-npm run build
-scp -r dist/* SEULOGIN@ssh.cin.ufpe.br:~/public_html/
+fly deploy --config deploy/fly.toml
 ```
+
+O site fica em https://gabileite.dev (app `gabileite-dev`).

@@ -1,5 +1,5 @@
 import { secoes } from './Navbar.jsx'
-import { useLanguage } from '../i18n/LanguageContext.jsx'
+import { useLanguage } from '../../i18n/LanguageContext.jsx'
 
 export default function Footer() {
   const { t } = useLanguage()

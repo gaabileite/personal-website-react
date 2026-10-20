@@ -1,27 +1,14 @@
 import { useState } from 'react'
 import Intro from './components/Intro.jsx'
-import Navbar from './components/Navbar.jsx'
+import Navbar from './components/layout/Navbar.jsx'
 import Section from './components/Section.jsx'
 import Teclado from './components/Teclado.jsx'
 import Contato from './components/Contato.jsx'
-import Footer from './components/Footer.jsx'
+import Footer from './components/layout/Footer.jsx'
 import foto from './assets/gabriela.jpg'
 import { projects } from './data/projects.js'
+import { technologies } from './data/technologies.js'
 import { useLanguage } from './i18n/LanguageContext.jsx'
-
-// Ícones do devicon (CDN); o filtro em CSS deixa todos monocromáticos.
-const icone = (nome, variante = 'original') =>
-  `https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/${nome}/${nome}-${variante}.svg`
-
-const tecnologias = [
-  { nome: 'Python', img: icone('python') },
-  { nome: 'C++', img: icone('cplusplus') },
-  { nome: 'JavaScript', img: icone('javascript') },
-  { nome: 'React', img: icone('react') },
-  { nome: 'HTML', img: icone('html5') },
-  { nome: 'CSS', img: icone('css3') },
-  { nome: 'Git', img: icone('git') },
-]
 
 export default function App() {
   const { t, lang } = useLanguage()
@@ -78,7 +65,7 @@ export default function App() {
 
         <Section id="technologies" titulo={t.technologies.title}>
           <ul className="tech-grade">
-            {tecnologias.map((tec) => (
+            {technologies.map((tec) => (
               <li key={tec.nome} className="tech">
                 <img src={tec.img} alt="" width="72" height="72" loading="lazy" />
                 <span>{tec.nome}</span>

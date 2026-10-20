@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import LanguageToggle from './LanguageToggle.jsx'
-import { useLanguage } from '../i18n/LanguageContext.jsx'
+import { useLanguage } from '../../i18n/LanguageContext.jsx'
 
 export const secoes = ['home', 'about', 'technologies', 'experience', 'projects', 'contact']
 

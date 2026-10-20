@@ -1,4 +1,4 @@
-import { useLanguage } from '../i18n/LanguageContext.jsx'
+import { useLanguage } from '../../i18n/LanguageContext.jsx'
 
 export default function LanguageToggle({ className = '' }) {
   const { lang, setLang, t } = useLanguage()
