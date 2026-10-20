@@ -100,12 +100,17 @@ export default function App() {
                 <article key={p.title.en} className="cartao projeto">
                   <h3>{p.title[lang]}</h3>
                   <p>{p.description[lang]}</p>
+                  {p.role && (
+                    <p className="projeto-papel">
+                      <span className="dim-forte">{t.projects.role}:</span> {p.role[lang]}
+                    </p>
+                  )}
                   <ul className="pilulas">
                     {p.tags.map((tag) => <li key={tag}>{tag}</li>)}
                   </ul>
                   <div className="projeto-links">
                     {p.repo && <a href={p.repo} target="_blank" rel="noreferrer">{t.projects.repo} ↗</a>}
-                    {p.demo && <a href={p.demo} target="_blank" rel="noreferrer">{t.projects.demo} ↗</a>}
+                    {p.demo && <a href={p.demo} target="_blank" rel="noreferrer">{p.demoLabel ? p.demoLabel[lang] : t.projects.demo} ↗</a>}
                   </div>
                 </article>
               ))}
