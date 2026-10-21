@@ -17,6 +17,9 @@ export default function Contato() {
           </li>
         ))}
       </ul>
+      <a className="botao botao-cheio botao-cv" href={c.resume.file} download>
+        {c.resume.label}
+      </a>
       <hr />
       <p><span className="dim-forte">{c.location}</span> {c.locationValue}</p>
       <p><span className="dim-forte">{c.status}</span> {c.statusValue}</p>

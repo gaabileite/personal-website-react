@@ -196,6 +196,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .redes-icones { display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; color: var(--fg-bold); }
 .redes-icones a { display: block; transition: transform 0.2s, color 0.2s; }
 .redes-icones a:hover { transform: translateY(-3px); color: var(--accent); }
+.botao-cv { margin-top: 2rem; }
 .redes p + p { margin-top: 0.75rem; }
 .dim-forte { color: var(--fg-bold); font-weight: 400; }
 
